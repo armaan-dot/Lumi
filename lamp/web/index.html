@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumi — live lamp character</title>
+<link rel="stylesheet" href="/style.css">
+<script type="importmap">
+{ "imports": { "three": "/vendor/three/three.module.js", "three/stl": "/vendor/three/STLLoader.js" } }
+</script>
+</head>
+<body>
+<canvas id="view"></canvas>
+<video id="cam" playsinline muted autoplay></video>
+
+<section id="hud">
+  <div class="row"><span id="chip" class="chip s-ABSENT">ABSENT</span><span id="mode" class="tag"></span><span id="llm" class="tag"></span></div>
+  <div class="bar" title="attention score"><i id="attn"></i></div>
+  <div id="perf" class="mono"></div>
+  <div id="joints" class="mono"></div>
+</section>
+
+<section id="side">
+  <h3>Memory <button id="reset" title="forget all objects">reset</button></h3>
+  <ul id="memory"><li class="dim">nothing remembered yet</li></ul>
+  <h3>Plan</h3>
+  <div id="plan" class="mono dim">—</div>
+  <h3>Events</h3>
+  <div id="log" class="mono"></div>
+</section>
+
+<section id="talk">
+  <div id="captions"></div>
+  <form id="form"><input id="text" autocomplete="off" placeholder="type here if the mic is unavailable…"><button>send</button></form>
+  <div class="keys mono">sim without camera: <b>A</b> attend · <b>L</b> look away · <b>X</b> real camera</div>
+</section>
+
+<div id="start">
+  <div>
+    <h1>Lumi</h1>
+    <p>A lamp that notices when you look at it.<br>Needs camera + microphone (Chrome / Chromium).</p>
+    <button id="go">Wake Lumi</button>
+    <p class="dim small" id="startmsg"></p>
+  </div>
+</div>
+<script type="module" src="/main.js"></script>
+</body>
+</html>

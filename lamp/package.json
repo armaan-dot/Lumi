@@ -1,0 +1,23 @@
+{
+  "name": "lamp-character",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Live character around a simulated 5-DOF lamp robot",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node test/run.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "latest",
+    "@mediapipe/tasks-vision": "0.10.21",
+    "three": "0.170.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.16.0"
+  }
+}

@@ -1,0 +1,12 @@
+[Unit]
+Description=Lumi lamp character brain
+After=network-online.target
+
+[Service]
+WorkingDirectory=%h/lamp
+EnvironmentFile=%h/lamp/.env
+ExecStart=/usr/bin/node server/index.js
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
